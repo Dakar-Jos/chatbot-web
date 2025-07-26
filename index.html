@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ChatBot ATC-25</title>
+  <title>Chatbot ATC-25</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
 <body>
-  <!-- Dialogflow Messenger Script -->
-  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  intent="WELCOME"
-  chat-title="ATC-25"
-  agent-id="addec152-06dd-4e70-b4d1-c9ff52785203"
-  language-code="en"
-></df-messenger>
+  <!-- Chatbot personalizado -->
+  <df-messenger
+    intent="WELCOME"
+    chat-title="ATC-25"
+    agent-id="addec152-06dd-4e70-b4d1-c5f1ac5fd36c"
+    language-code="es">
+  </df-messenger>
 </body>
 </html>
