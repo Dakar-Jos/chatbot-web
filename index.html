@@ -2,26 +2,49 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chatbot ATC-25</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asistente UTC</title>
+
   <style>
     html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
+      font-family: sans-serif;
+      background-color: #f5f5f5;
+      overflow: auto;
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #e5e5ea;
+      --df-messenger-button-titlebar-color: #3c62b5;
+      --df-messenger-chat-background-color: #ffffff;
+      --df-messenger-font-color: #000000;
+      --df-messenger-send-icon: #3c62b5;
+      --df-messenger-user-message: #d0b3ff;
+
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
       height: 100%;
-      background-color: #ffffff;
-      font-family: Arial, sans-serif;
+      width: 100%;
+      max-height: 100vh;
+      z-index: 9999;
     }
   </style>
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script></head>
+
+  <!-- Script de Dialogflow Messenger -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+</head>
 <body>
-  <!-- Chatbot personalizado -->
-<df-messenger
+
+ <df-messenger
   intent="WELCOME"
   chat-title="ATC-25"
   agent-id="addec152-06dd-4e70-b4d1-c9ff52785203"
   language-code="en"
 ></df-messenger>
-></df-messenger>
+
 </body>
 </html>
