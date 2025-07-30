@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ATC-25</title>
+  <title>Asistente UTC</title>
 
   <style>
     html, body {
@@ -11,8 +11,6 @@
       margin: 0;
       padding: 0;
       font-family: sans-serif;
-      background-color: #f5f5f5;
-      overflow: auto;
       background-color: #000000;
       display: flex;
       justify-content: center;
@@ -30,38 +28,39 @@
     }
 
     df-messenger {
-@@ -24,22 +36,24 @@
+      --df-messenger-bot-message: #e5e5ea;
+      --df-messenger-button-titlebar-color: #3c62b5;
+      --df-messenger-chat-background-color: #ffffff;
+      --df-messenger-font-color: #000000;
+      --df-messenger-send-icon: #3c62b5;
       --df-messenger-user-message: #d0b3ff;
 
       position: fixed;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      max-height: 100vh;
       bottom: 16px;
       right: 16px;
       z-index: 9999;
     }
   </style>
 
-  <!-- Script de Dialogflow Messenger -->
+  <!-- Script del chatbot Dialogflow -->
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
 <body>
 
+  <!-- 🎥 Video centrado con reproducción automática -->
   <video autoplay muted controls loop>
     <source src="atc.mp4" type="video/mp4" />
+    Tu navegador no soporta la reproducción de video.
   </video>
 
   <!-- 🤖 Chatbot flotante -->
- <df-messenger
-  intent="WELCOME"
-  chat-title="ATC-25"
-  agent-id="addec152-06dd-4e70-b4d1-c9ff52785203"
-  language-code="en"
-></df-messenger>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="ATC-25"
+    agent-id="addec152-06dd-4e70-b4d1-c9ff52785203"
+    language-code="es"
+  ></df-messenger>
 
 </body>
 </html>
+
