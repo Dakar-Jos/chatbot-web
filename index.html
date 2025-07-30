@@ -15,7 +15,6 @@
       font-family: sans-serif;
     }
 
-    /* Video de fondo */
     #background-video {
       position: fixed;
       top: 50%;
@@ -27,9 +26,9 @@
       z-index: -1;
       transform: translate(-50%, -50%);
       background-size: cover;
+      pointer-events: none; /* evita selección */
     }
 
-    /* Ajuste del widget del chatbot */
     df-messenger {
       --df-messenger-bot-message: #e0e0ff;
       --df-messenger-button-titlebar-color: #2d2dff;
@@ -43,12 +42,13 @@
 </head>
 <body>
 
-  <!-- Video de fondo -->
+  <!-- Video de fondo (sin controles ni borde seleccionable) -->
   <video id="background-video" autoplay muted loop playsinline>
     <source src="atc.mp4" type="video/mp4" />
+    Tu navegador no admite la reproducción de video.
   </video>
 
-  <!-- Script del chatbot -->
+  <!-- Chatbot de Dialogflow -->
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
   <df-messenger
     intent="WELCOME"
@@ -59,3 +59,4 @@
 
 </body>
 </html>
+
